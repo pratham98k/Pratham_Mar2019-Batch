@@ -262,4 +262,4 @@ pod "acs-dropwizard-eating-zebu-795dcbd4f6-5wrkp" deleted
 
 Now test application using Browser, use ingress IP 
 
-
+![Iamge](https://github.com/pratham98k/Pratham_Mar2019-Batch/blob/master/Project1/app%20in%20Browser.PNG)
