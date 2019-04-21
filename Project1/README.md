@@ -199,10 +199,10 @@ NAME                                            TYPE           CLUSTER-IP     EX
 queenly-narwhal-nginx-ingress-controller        LoadBalancer   10.0.204.71    104.211.209.195   80:30016/TCP,443:30932/TCP   1m
 queenly-narwhal-nginx-ingress-default-backend   ClusterIP      10.0.226.116   <none>            80/TCP                       1m
 prathamesh@Azure:~$
-
+```
 
 Now we are installing dropwizard sample Java application on same namespace (Dropwizard)
-
+```
 prathamesh@Azure:~$ helm install aks-dropwizard --namespace dropwizard
 NAME:   eating-zebu
 LAST DEPLOYED: Fri Apr 19 18:02:10 2019
