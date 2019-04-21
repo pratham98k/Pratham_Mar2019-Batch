@@ -1,3 +1,8 @@
+ls
+
+
+
+
 #Project1
 Project 1 is based on java test applicaton deployned on highly avalibe K8s cluster.
 
@@ -49,15 +54,13 @@ It is a best practice to use the replication controller to manage the pod life c
 
 
 
-+--------------------------------------------------+-----------------------------------------------------+
-|                   Replica Set                    |               Replication Controller                |
-+--------------------------------------------------+-----------------------------------------------------+
-| Replica Set supports the new set-based selector. | Replication Controller only supports equality-based |
-| This gives more flexibility. for eg:             | selector. for eg:                                   |
-|          environment in (production, qa)         |             environment = production                |
-|  This selects all resources with key equal to    | This selects all resources with key equal to        |
-|  environment and value equal to production or qa | environment and value equal to production           |
-+--------------------------------------------------+-----------------------------------------------------+
+
+Replica Set | Replication Controller 
+------------|-------------------------
+Replica Set supports the new set-based selector. This gives more flexibility. for eg: environment in (production, qa)  This selects all resources with key equal to environment and value equal to production or qa |   Replication Controller only supports equality-based selector. for eg: environment = production This selects all resources with key equal to This selects all resources with key equal to
+
+
+
 
 #DaemonSets
 
