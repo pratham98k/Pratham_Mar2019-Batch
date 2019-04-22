@@ -31,7 +31,7 @@ spec:
     protocol: TCP
   selector:
     app: hpa-example
-  type: ClusterIP
+  type: LoadBalancer
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler

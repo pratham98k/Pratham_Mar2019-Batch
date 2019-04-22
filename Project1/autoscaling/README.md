@@ -15,3 +15,10 @@ To generate load to auto scale pod
 kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 
 ```
+
+Generate load on pod doing more http request.
+
+```
+while true; do wget -q -O- http://IP/hello-world; done
+
+```
