@@ -12,14 +12,14 @@ Standard storage is backed by HDDs, and delivers cost-effective storage while st
 The managed-premium storage class provisions a premium Azure disk.
 Premium disks are backed by SSD-based high-performance, low-latency disk. Perfect for VMs running production workload. If the AKS nodes in your cluster use premium storage, select the managed-premium class.
 
-'''
+```
 $ kubectl get sc
 
 NAME                PROVISIONER                AGE
 default (default)   kubernetes.io/azure-disk   1h
 managed-premium     kubernetes.io/azure-disk   1h
 
-'''
+```
 
 #Create a persistent volume claim
 
@@ -27,12 +27,12 @@ A persistent volume claim (PVC) is used to automatically provision storage based
 
 use azure-premium.yaml
 
-
+```
 kubectl aaply -f azure-premium.yaml
 
 persistentvolumeclaim/azure-managed-disk created
+```
 
-'''
 
 #Use the persistent volume
 
@@ -41,12 +41,12 @@ Once the persistent volume claim has been created and the disk successfully prov
 Create a file named azure-pvc-disk.yaml, and copy in the following manifest.
 
 
-'''
+```
 kubectl apply -f azure-pvc-disk.yaml
 
 pod/mypod created
 
-'''
+```
 
 
 
