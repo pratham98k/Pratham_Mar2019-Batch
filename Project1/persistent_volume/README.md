@@ -28,19 +28,11 @@ A persistent volume claim (PVC) is used to automatically provision storage based
 use azure-premium.yaml
 
 
+kubectl aaply -f azure-premium.yaml
+
+persistentvolumeclaim/azure-managed-disk created
+
 '''
-piVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: azure-managed-disk
-  spec:
-    accessModes:
-      - ReadWriteOnce
-        storageClassName: managed-premium
-	  resources:
-	      requests:
-	            storage: 5Gi
-		 '''
 
 #Use the persistent volume
 
@@ -48,27 +40,13 @@ Once the persistent volume claim has been created and the disk successfully prov
 
 Create a file named azure-pvc-disk.yaml, and copy in the following manifest.
 
+
 '''
-kind: Pod
-apiVersion: v1
-metadata:
-  name: mypod
-  spec:
-    containers:
-      - name: mypod
-          image: nginx:1.15.5
-	      resources:
-	            requests:
-		            cpu: 100m
-			            memory: 128Mi
-				          limits:
-					          cpu: 250m
-						          memory: 256Mi
-							      volumeMounts:
-							          - mountPath: "/mnt/azure"
-								        name: volume
-									  volumes:
-									      - name: volume
-									            persistentVolumeClaim:
-										            claimName: azure-managed-disk
-											    '''
+kubectl apply -f azure-pvc-disk.yaml
+
+pod/mypod created
+
+'''
+
+
+
