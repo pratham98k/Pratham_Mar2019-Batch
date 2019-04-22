@@ -13,7 +13,7 @@ Namespaces provide a scope for names. Names of resources need to be unique withi
 #POD:
 A pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers. A pod’s contents are always co-located and co-scheduled, and run in a shared context. A pod models an application-specific “logical host” - it contains one or more application containers which are relatively tightly coupled — in a pre-container world, being executed on the same physical or virtual machine would mean being executed on the same logical host.
 
-![POD] (https://d33wubrfki0l68.cloudfront.net/fe03f68d8ede9815184852ca2a4fd30325e5d15a/98064/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg)
+![POD] (https://github.com/pratham98k/Pratham_Mar2019-Batch/blob/master/Project1/module_03_pods.svg)
 
 #Deployment
 
